@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const API_KEY = process.env.REACT_APP_SPOTIFY_API_KEY;
+  const API_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+  const API_KEY = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
   return (
     <div className="App">
       <header className="App-header">
