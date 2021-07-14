@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    width: 70%;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-image {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+    border-radius: 24px; 
+}
+
+.playlist-image, .playlist-title {
+    flex:auto;
+    width: 100%;
+}
+
+.playlist-title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.playlist {
+    line-height: 10px;
+}
+
+.title {
+    font-size: 60px;
+}
+
+.artists{
+    font-size: 20px;
+}
+
+.album{
+    font-size: 20px;
+}
+
+.fa-play-circle {
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.select-button {
+    width: 22%;
+    height: 50px;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: #1db954;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;   
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.playlist-title a {
+    text-align: center;
+}
+
+.select-button:hover {
+    background-color: white;
+    color: #1db954;
+}
