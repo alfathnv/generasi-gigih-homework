@@ -12,7 +12,7 @@ export class Playlist extends Component{
 
                 <div className="playlist-title">
                     <div>
-                        <iframe src="https://open.spotify.com/embed/track/3z8h0TU7ReDPLIbEnYhWZb?theme=0" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe src="https://open.spotify.com/embed/track/3z8h0TU7ReDPLIbEnYhWZb?theme=0" title="Bohemian Rhapsody"  width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
                     <div className="playlist">
                         <h1 className="title">{data.name}</h1>
