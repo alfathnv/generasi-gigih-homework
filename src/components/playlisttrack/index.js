@@ -1,7 +1,7 @@
 import EmbedSpotify from '../embedspotify/index';
 import './index.css';
 
-const PlaylistTitle = (props) => {
+const PlaylistTrack = (props) => {
     return (
         <div className="playlist-title">
             <EmbedSpotify url="https://open.spotify.com/embed/track/3z8h0TU7ReDPLIbEnYhWZb?theme=0" title="Bohemian Rhapsody"/>
@@ -15,4 +15,4 @@ const PlaylistTitle = (props) => {
     )
 }
 
-export default PlaylistTitle;
+export default PlaylistTrack;
