@@ -19,7 +19,7 @@ export class Playlist extends Component{
                         <p className="artists">{data.artists[0].name}</p>
                         <h2 className="album">{data.album.name}</h2>   
                     </div>
-                    <a href={data.external_urls.spotify}><button className="select-button">Select<span className="fa fa-play-circle"></span></button></a>
+                    <a href={data.external_urls.spotify} className="select-button">Select<span className="fa fa-play-circle"></span></a>
                     
                 </div>
                 {/*<div>

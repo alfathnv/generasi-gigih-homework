@@ -47,11 +47,10 @@
 
 .select-button {
     width: 22%;
-    height: 50px;
+    
     margin: 0 auto;
     display: inline-block;
     background-color: #1db954;
-    border: none;
     text-decoration: none;
     cursor: pointer;
     font-size: 18px;
@@ -60,10 +59,8 @@
     font-weight: bold;
     transition: all 0.3s;
     letter-spacing: 1px;
-}
-
-.playlist-title a {
     text-align: center;
+    padding: 15px 0;
 }
 
 .select-button:hover {
