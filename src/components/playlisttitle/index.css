@@ -1,26 +1,8 @@
-.container {
-    display: flex;
-    width: 70%;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-.album-image {
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
-    border-radius: 24px; 
-}
-
-.playlist-image, .playlist-title {
-    flex:auto;
-    width: 100%;
-}
-
 .playlist-title {
     display: flex;
     flex-direction: column;
+    flex:auto;
+    width: 100%;
     gap: 30px;
 }
 
@@ -32,11 +14,7 @@
     font-size: 60px;
 }
 
-.artists{
-    font-size: 20px;
-}
-
-.album{
+.artists, .album {
     font-size: 20px;
 }
 

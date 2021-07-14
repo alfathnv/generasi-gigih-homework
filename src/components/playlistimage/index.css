@@ -1,0 +1,12 @@
+
+.playlist-image {
+    flex:auto;
+    width: 100%;
+}
+
+.album-image {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+    border-radius: 24px; 
+}
