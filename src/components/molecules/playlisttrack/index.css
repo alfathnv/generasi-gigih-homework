@@ -1,0 +1,12 @@
+.playlist-title {
+    display: flex;
+    flex-direction: column;
+    flex:auto;
+    width: 100%;
+    gap: 30px;
+}
+
+.playlist {
+    line-height: 10px;
+}
+

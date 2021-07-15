@@ -1,5 +1,5 @@
 import './App.css';
-import {Playlist} from './components/createplaylist/index';
+import { Playlist } from './containers/pages/playlist';
 
 function App() {
   return (
