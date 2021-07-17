@@ -1,7 +1,13 @@
-.container {
+.container{
     display: flex;
-    width: 70%;
-    gap: 30px;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+
+    width: 400px;
+    height: 120px;
+    
+    background: rgba(218, 0, 55, 0.82);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
 }

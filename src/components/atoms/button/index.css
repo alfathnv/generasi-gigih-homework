@@ -1,6 +1,6 @@
 .fa-play-circle {
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .select-button {
@@ -11,7 +11,7 @@
     background-color: #1db954;
     text-decoration: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     color: white;   
     border-radius: 20px;
     font-weight: bold;

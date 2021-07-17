@@ -1,12 +1,10 @@
-import data from '../../../assets/singlesample/index';
-
-import Image from '../../atoms/image/index'
+import Image from '../../atoms/image/index';
 import './index.css';
 
-const PlaylistImage = () => {
+const PlaylistImage = (props) => {
     return (
         <div className="playlist-image">
-            <Image url={data.album.images[0].url} alt="bohemian-rhapsody"/>
+            <Image url={props.url} alt={props.alt}/>
         </div>
     )
 }

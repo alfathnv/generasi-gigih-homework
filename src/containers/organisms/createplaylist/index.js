@@ -1,17 +1,16 @@
 import React,{Component} from 'react';
-import data from '../../../assets/singlesample/index';
 import PlaylistImage from '../../../components/molecules/playlistimage/index';
 import PlaylistTrack from '../../../components/molecules/playlisttrack';
 
 import './index.css';
 
-export class CreatePlaylist extends Component{
-    render(){
-        return (
-            <div className="container">
-                <PlaylistImage url={data.album.images[0].url} alt="bohemian-rhapsody"></PlaylistImage>
-                <PlaylistTrack />
-            </div>
-        )
-    }
+const CreatePlaylist = (props) => {
+    return (
+        <div className="container">
+            <PlaylistImage url={props.url} alt={props.url}/>
+            <PlaylistTrack title={props.title} artist={props.artist} album={props.album}/>
+        </div>
+    )
 }
+
+export default CreatePlaylist;

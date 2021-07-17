@@ -1,0 +1,9 @@
+.row-playlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 50px;
+    justify-content:left;
+    align-items: left;
+}

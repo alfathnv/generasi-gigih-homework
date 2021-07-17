@@ -1,12 +1,20 @@
 .playlist-title {
     display: flex;
     flex-direction: column;
-    flex:auto;
-    width: 100%;
-    gap: 30px;
+    padding: 0px;
+    
+    position: static;
+    width: 260px;
+    height: 160px;
+
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: center;
 }
 
 .playlist {
     line-height: 10px;
+    text-align: left;
 }
 

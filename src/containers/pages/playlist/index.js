@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
 
-import {CreatePlaylist} from '../../organisms/createplaylist';
+import RowPlaylist from '../../templates/row-playlist';
 
 export class Playlist extends Component{
     render(){
         return (
-            <CreatePlaylist/>
+            <RowPlaylist/>
+            
         )
     }
 }

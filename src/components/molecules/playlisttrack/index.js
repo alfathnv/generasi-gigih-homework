@@ -7,16 +7,16 @@ import Album from '../../atoms/album';
 import Button from '../../atoms/button';
 import './index.css';
 
-const PlaylistTrack = () => {
+const PlaylistTrack = (props) => {
     return (
         <div className="playlist-title">
-            <EmbedSpotify url="https://open.spotify.com/embed/track/3z8h0TU7ReDPLIbEnYhWZb?theme=0" title="Bohemian Rhapsody"/>
+            {/* <EmbedSpotify url="https://open.spotify.com/embed/track/3z8h0TU7ReDPLIbEnYhWZb?theme=0" title="Bohemian Rhapsody"/> */}
             <div className="playlist">
-                <Title title={data.name}/>
-                <Artist artist={data.artists[0].name}/>
-                <Album album={data.album.name}/>
+                <Title title={props.title}/>
+                <Artist artist={props.artist}/>
+                <Album album={props.album}/>
             </div>
-                <Button url={data.external_urls.spotify} name='Select'/>
+                {/* <Button url={data.external_urls.spotify} name='Select'/> */}
         </div>
     )
 }
