@@ -16,7 +16,7 @@ const PlaylistTrack = (props) => {
                 <Artist artist={props.artist}/>
                 <Album album={props.album}/>
             </div>
-                {/* <Button url={data.external_urls.spotify} name='Select'/> */}
+                <Button url={data.external_urls.spotify} name='Select'/>
         </div>
     )
 }
