@@ -18,6 +18,7 @@ export class RowPlaylist extends Component{
                         title={data.name}
                         artist={data.artists[0].name}
                         album={data.album.name}
+                        urltrack={data.album.external_urls.spotify}
                         />
                     </div>
                 )

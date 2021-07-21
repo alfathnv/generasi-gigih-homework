@@ -78,6 +78,7 @@ const data = [
     type: "track",
     uri: "spotify:track:4u7EnebtmKWzUH433cf5Qv"
   },
+  
   {
     album: {
       album_type: "album",

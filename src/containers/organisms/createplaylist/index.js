@@ -8,7 +8,7 @@ const CreatePlaylist = (props) => {
     return (
         <div className="container">
             <PlaylistImage url={props.url} alt={props.url}/>
-            <PlaylistTrack title={props.title} artist={props.artist} album={props.album}/>
+            <PlaylistTrack title={props.title} artist={props.artist} album={props.album} url={props.urltrack}/>
         </div>
     )
 }
