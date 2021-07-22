@@ -1,15 +1,15 @@
-import './App.css';
-import { Playlist } from './containers/pages/playlist';
-import Count from './count';
-import Search from './pages/search.index'
+import Login from "./containers/pages/Login";
+import Playlist from "./containers/pages/Playlist";
 
 function App() {
-  return (
-    <div className="App">
-        {/* <Playlist></Playlist> */}
-        <Search></Search>
-    </div>
-  );
+  let page;
+  console.log(window.location.href);
+  if (window.location.href === "http://localhost:3000/") {
+    page = <Login />;
+  } else {
+    page = <Playlist />;
+  }
+  return <div>{page}</div>;
 }
 
 export default App;

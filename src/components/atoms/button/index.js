@@ -1,7 +1,14 @@
-import './index.css'
+import React from "react";
+import "./index.css";
 
 const Button = (props) => {
-    return <a href={props.url} className="select-button">{props.name}<span className="fa fa-play-circle"></span></a>; 
-}
+  return (
+    <div>
+      <a className="button" href={props.url}>
+        {props.name}
+      </a>
+    </div>
+  );
+};
 
 export default Button;

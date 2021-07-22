@@ -1,12 +1,8 @@
-import React,{Component} from 'react';
+import React from "react";
+import Container from "../../templates/Playlist";
 
-import RowPlaylist from '../../templates/row-playlist';
+const Playlist = () => {
+  return <Container></Container>;
+};
 
-export class Playlist extends Component{
-    render(){
-        return (
-            <RowPlaylist/>
-            
-        )
-    }
-}
+export default Playlist;
