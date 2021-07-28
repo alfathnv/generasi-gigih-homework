@@ -1,0 +1,8 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
