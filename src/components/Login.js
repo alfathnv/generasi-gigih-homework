@@ -1,14 +1,13 @@
-import { auth } from './auth'
-import './Login.css'
+import "./Login.css";
 
-const Login = () => {
+const Login = (props) => {
     return (
         <div className="login-container">
-            <a href={auth()} className="login-button">
-                Login
+            <a href={props.url} className="login-button">
+                {props.name}
             </a>
         </div>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;
