@@ -1,13 +1,13 @@
-import React from "react";
-import { Select } from "../components/select";
-import { createPlaylist } from "../components/create";
+import React from 'react'
+import { Select } from '../components/select'
+import { createPlaylist } from '../components/create'
 
 const CreateTrack = () => {
-    const { select, token } = Select();
+    const { select, token } = Select()
 
     const handleSubmit = () => {
-        createPlaylist(token, select);
-    };
+        createPlaylist(token, select)
+    }
     return (
         <form onSubmit={() => createPlaylist(token, select)} action="#">
             <label htmlFor="title">Title</label>
@@ -31,7 +31,7 @@ const CreateTrack = () => {
 
             <button>Submit</button>
         </form>
-    );
-};
+    )
+}
 
-export default CreateTrack;
+export default CreateTrack

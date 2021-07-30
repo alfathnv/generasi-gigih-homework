@@ -1,26 +1,17 @@
-import CreatePlaylist from "./CreatePlaylist";
-import Track from "./Track";
+import Login from './Login'
+import Track from './Track'
+
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link,
     Redirect,
-} from "react-router-dom";
-import { useState, useEffect } from "react";
-import { getAccessToken } from "../components/access";
+} from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 const Routing = () => {
-    const [token, setToken] = useState(getAccessToken);
-    const [isLogin, setIsLogin] = useState(false);
-
-    useEffect(() => {
-        if (token === null) {
-            setIsLogin(false);
-        } else {
-            setIsLogin(true);
-        }
-    }, [token]);
+    const [isLogin, setIsLogin] = useState(false)
 
     return (
         <Router>
@@ -37,15 +28,15 @@ const Routing = () => {
                 </nav>
                 <Switch>
                     <Route path="/createplaylist">
-                        {isLogin ? <CreatePlaylist /> : <Redirect to="/" />}
+                        <Track />
                     </Route>
                     <Route path="/">
-                        <Track />
+                        <Login />
                     </Route>
                 </Switch>
             </div>
         </Router>
-    );
-};
+    )
+}
 
-export default Routing;
+export default Routing

@@ -1,7 +1,7 @@
-import Playlist from './components/Playlist'
+import Routing from './pages/Routing'
 
 function App() {
-    return <Playlist></Playlist>
+    return <Routing></Routing>
 }
 
 export default App

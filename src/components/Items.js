@@ -7,7 +7,7 @@ const Items = (props) => {
             <h2>{props.album}</h2>
             <button onClick={props.handle}>{props.select}</button>
         </div>
-    );
-};
+    )
+}
 
-export default Items;
+export default Items

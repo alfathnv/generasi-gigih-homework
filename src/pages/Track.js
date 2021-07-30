@@ -1,15 +1,13 @@
-import React from "react";
-import { auth } from "../components/auth";
-import Search from "../components/Search";
-import Login from "../components/Login";
+import React from 'react'
+
+import Search from '../components/Search'
 
 const Track = () => {
     return (
         <div>
-            <Login url={auth()} name="Login"></Login>
             <Search></Search>
         </div>
-    );
-};
+    )
+}
 
-export default Track;
+export default Track
