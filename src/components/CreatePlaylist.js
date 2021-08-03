@@ -1,37 +1,41 @@
-import React from 'react'
-import { Select } from '../components/select'
-import { createPlaylist } from '../components/create'
+import { useState } from 'react'
+import { createPlaylist } from '../assets/spotify'
+import Modal from './Modal'
+import { useSelector } from 'react-redux'
 
-const CreateTrack = () => {
-    const { select, token } = Select()
-
-    const handleSubmit = () => {
-        createPlaylist(token, select)
+const CreatePlaylist = () => {
+    const { token, tracks } = useSelector((state) => state.playlist)
+    const [isOpen, setIsOpen] = useState(false)
+    const BUTTON_WRAPPER_STYLES = {
+        position: 'relative',
+        zIndex: 1,
+    }
+    const handleCreate = (e) => {
+        e.preventDefault()
+        const request = {
+            name: e.target.title.value,
+            description: e.target.desc.value,
+            public: false,
+        }
+        if (request.name !== '' && request.desc !== '') {
+            createPlaylist(token, tracks, request)
+            setIsOpen(false)
+        } else {
+            alert('Masukan Title dan Deskripsi')
+        }
     }
     return (
-        <form onSubmit={() => createPlaylist(token, select)} action="#">
-            <label htmlFor="title">Title</label>
-            <input
-                type="text"
-                id="title"
-                name="title"
-                minLength="10"
-                placeholder="title"
-            ></input>
-            <hr></hr>
-            <label htmlFor="desc">Description</label>
-            <textarea
-                type="text"
-                id="desc"
-                name="desc"
-                rows="3"
-                minLength="20"
-                placeholder="description..."
-            ></textarea>
-
-            <button>Submit</button>
-        </form>
+        <div style={BUTTON_WRAPPER_STYLES}>
+            <button onClick={() => setIsOpen(true)}>Create Playlist</button>
+            <Modal
+                open={isOpen}
+                onClose={() => setIsOpen(false)}
+                onCreate={handleCreate}
+            >
+                Fancy Modal
+            </Modal>
+        </div>
     )
 }
 
-export default CreateTrack
+export default CreatePlaylist

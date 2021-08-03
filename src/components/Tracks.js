@@ -1,4 +1,4 @@
-const Items = (props) => {
+const Tracks = (props) => {
     return (
         <div>
             <img src={props.url} alt={props.name}></img>
@@ -10,4 +10,4 @@ const Items = (props) => {
     )
 }
 
-export default Items
+export default Tracks

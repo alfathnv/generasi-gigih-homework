@@ -1,40 +1,28 @@
-import Login from './Login'
-import Track from './Track'
-
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
     Redirect,
 } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import Login from './Login'
+import Navbar from './Navbar'
+import Playlist from './Playlist'
 
 const Routing = () => {
-    const [isLogin, setIsLogin] = useState(false)
-
+    const { isAuth } = useSelector((state) => state.playlist)
     return (
         <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/createplaylist">Create Playlist</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Switch>
-                    <Route path="/createplaylist">
-                        <Track />
-                    </Route>
-                    <Route path="/">
-                        <Login />
-                    </Route>
-                </Switch>
-            </div>
+            <Navbar />
+            <Switch>
+                {console.log(isAuth)}
+                <Route path="/createplaylist">
+                    {isAuth ? <Playlist /> : <Redirect to="/" />}
+                </Route>
+                <Route path="/">
+                    <Login />
+                </Route>
+            </Switch>
         </Router>
     )
 }

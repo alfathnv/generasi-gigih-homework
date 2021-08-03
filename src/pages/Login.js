@@ -1,28 +1,23 @@
-import './Login.css'
-import { auth } from '../components/auth'
-import { Select } from '../components/select'
-import { getAccessToken } from '../components/access'
+import { useSelector, useDispatch } from 'react-redux'
+import { login } from '../redux/playlistSlice'
 import { useEffect } from 'react'
+import { authLink, getAccessToken } from '../assets/auth'
 
 const Login = () => {
-    const { token, setToken } = Select()
+    const { isAuth, token } = useSelector((state) => state.playlist)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        if (
-            window.location.href.includes('http://localhost:3000/#access_token')
-        ) {
-            setToken(getAccessToken())
-            console.log('aw')
+        if (!isAuth && window.location.hash) {
+            console.log('not auth')
+            dispatch(login(getAccessToken()))
         }
-    }, [])
-    console.log(token)
+    }, [dispatch, isAuth, token])
 
     return (
-        <div className="login-container">
-            <a href={auth()} className="login-button">
-                Login
-            </a>
-        </div>
+        <>
+            <a href={authLink()}>Click</a>
+        </>
     )
 }
 
