@@ -1,0 +1,88 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 'navbar main';
+}
+
+.nav_container {
+    grid-area: navbar;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+}
+
+.section {
+    margin: 0;
+    padding: 40px 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    padding: 5px 20px;
+    text-decoration: none;
+    background-color: crimson;
+    color: white;
+    font-size: 3vh;
+    transition: all 0.35s;
+    font-weight: bold;
+}
+
+.item:hover {
+    background-color: white;
+    color: crimson;
+}
+
+.login_container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_button {
+    background-color: rgb(35, 35, 35);
+    color: crimson;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    transition: all 0.35s;
+}
+
+.login_button:hover {
+    background-color: crimson;
+    color: rgb(35, 35, 35);
+}
+
+.playlist_container {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2% 1fr;
+    grid-template-areas:
+        'search'
+        'tracks';
+}
+.search {
+    grid-area: search;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tracks {
+    grid-area: tracks;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

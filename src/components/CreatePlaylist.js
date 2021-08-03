@@ -31,9 +31,7 @@ const CreatePlaylist = () => {
                 open={isOpen}
                 onClose={() => setIsOpen(false)}
                 onCreate={handleCreate}
-            >
-                Fancy Modal
-            </Modal>
+            ></Modal>
         </div>
     )
 }

@@ -1,6 +1,8 @@
+import styles from './playlist.module.css'
+
 const Tracks = (props) => {
     return (
-        <div>
+        <div className={styles.item}>
             <img src={props.url} alt={props.name}></img>
             <h1>{props.name}</h1>
             <h2>{props.artist}</h2>

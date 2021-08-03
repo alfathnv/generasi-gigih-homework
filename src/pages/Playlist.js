@@ -6,6 +6,7 @@ import { getOptions } from '../assets/spotify'
 import Search from '../components/Search'
 import Tracks from '../components/Tracks'
 import CreatePlaylist from '../components/CreatePlaylist'
+import styles from './pages.module.css'
 
 const Playlist = () => {
     const { token, datas, tracks } = useSelector((state) => state.playlist)
@@ -59,9 +60,11 @@ const Playlist = () => {
     }
 
     return (
-        <div>
-            <Search handle={handleSubmit} />
-            <div>
+        <div className={styles.playlist_container}>
+            <div className={styles.search}>
+                <Search handle={handleSubmit} />
+            </div>
+            <div className={styles.tracks}>
                 {datas.map((data) => (
                     <Tracks
                         url={data.album.images[1].url}

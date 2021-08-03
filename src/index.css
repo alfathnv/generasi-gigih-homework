@@ -5,14 +5,9 @@ body {
 }
 
 body {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(50, 50, 50);
     color: white;
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
 }

@@ -1,12 +1,12 @@
 import Button from './Button'
 import Input from './Input'
+import styles from './playlist.module.css'
 
 const Search = ({ handle }) => {
     return (
-        <div>
+        <div className={styles.search_container}>
             <form onSubmit={handle}>
                 <Input type="text" name="query" place="Search..." />
-                <Button value="Login" />
             </form>
         </div>
     )

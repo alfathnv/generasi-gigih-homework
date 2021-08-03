@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom'
+import styles from './pages.module.css'
 
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/createplaylist">Create Playlist</Link>
-                </li>
+        <nav className={styles.nav_container}>
+            <ul className={styles.section}>
+                <Link to="/" className={styles.item}>
+                    Home
+                </Link>
+                <Link to="/createplaylist" className={styles.item}>
+                    Create Playlist
+                </Link>
             </ul>
         </nav>
     )
