@@ -2,19 +2,11 @@
     min-height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 1fr;
-    grid-template-rows: 100%;
+    grid-template-columns: 78px 1fr;
     grid-template-areas: 'navbar main';
 }
 
-.nav_container {
-    grid-area: navbar;
-    background-color: rgb(35, 35, 35);
-    display: flex;
-}
-
 .section {
-    margin: 0;
     padding: 40px 0;
     width: 100%;
     list-style: none;
@@ -47,8 +39,8 @@
 }
 
 .login_button {
-    background-color: rgb(35, 35, 35);
-    color: crimson;
+    background-color: rgb(20, 20, 20);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
@@ -60,29 +52,113 @@
 
 .login_button:hover {
     background-color: crimson;
-    color: rgb(35, 35, 35);
+    color: white;
 }
 
 .playlist_container {
     grid-area: main;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 2% 1fr;
-    grid-template-areas:
-        'search'
-        'tracks';
+    grid-template-rows: 100px 1fr;
+    margin-top: 20px;
 }
 .search {
-    grid-area: search;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.tracks {
-    grid-area: tracks;
+
+.tracks_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1200px) {
+    .tracks_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.track {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    min-width: 300px;
+    min-height: 350px;
+    background-color: rgb(50, 50, 50, 0.7);
+    border-radius: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .tracks_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .track {
+        min-width: 200px;
+        min-height: 250px;
+    }
+}
+
+.track_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 300px;
+    min-height: 350px;
+    background-color: rgb(17, 16, 29, 1);
+    border-radius: 12px;
+}
+
+.track:hover {
+    background-color: rgb(17, 16, 29, 1);
+    cursor: pointer;
+}
+
+.track_select:hover {
+    cursor: pointer;
+}
+
+.track:active {
+    background-color: rgb(17, 16, 29, 1);
+}
+
+.track_image {
+    width: 75%;
+    opacity: 1;
+    display: block;
+}
+
+.middle {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.track_title {
+    font-size: 20px;
+}
+
+.track_artist {
+    font-size: 10px;
+}
+
+.track_album {
+    font-size: 15px;
+}
+
+.track_button {
+    border: none;
+    background: none;
+    color: white;
 }

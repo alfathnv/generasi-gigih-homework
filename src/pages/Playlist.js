@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { search, addTrack, removeTrack } from '../redux/playlistSlice'
+import { search } from '../redux/playlistSlice'
 import { useState, useEffect } from 'react'
 import sample from '../assets/sample'
 import { getOptions } from '../assets/spotify'
@@ -7,17 +7,19 @@ import Search from '../components/Search'
 import Tracks from '../components/Tracks'
 import CreatePlaylist from '../components/CreatePlaylist'
 import styles from './pages.module.css'
+import { Select } from '../components/Select'
 
 const Playlist = () => {
-    const { token, datas, tracks } = useSelector((state) => state.playlist)
-    const [query, setQuery] = useState('')
+    const { token, datas } = useSelector((state) => state.playlist)
+    const [query, setQuery] = useState('twice')
     const dispatch = useDispatch()
+    const { isSelected, handleSelect } = Select()
 
     useEffect(() => {
         console.log(token)
         const API_ENDPOINT = 'https://api.spotify.com/v1/search'
         const TYPE = 'track'
-        const LIMIT = 12
+        const LIMIT = 20
         const paramsData = {
             q: query,
             type: TYPE,
@@ -39,32 +41,12 @@ const Playlist = () => {
         setQuery(e.target.query.value)
     }
 
-    const isSelected = (id) => {
-        return tracks.includes(id)
-    }
-
-    const handleSelect = (id) => {
-        if (!isSelected(id)) {
-            addSelect(id)
-        } else {
-            removeSelect(id)
-        }
-    }
-
-    const addSelect = (id) => {
-        dispatch(addTrack(id))
-    }
-
-    const removeSelect = (id) => {
-        dispatch(removeTrack(id))
-    }
-
     return (
         <div className={styles.playlist_container}>
             <div className={styles.search}>
                 <Search handle={handleSubmit} />
             </div>
-            <div className={styles.tracks}>
+            <div className={styles.tracks_container}>
                 {datas.map((data) => (
                     <Tracks
                         url={data.album.images[1].url}
@@ -73,7 +55,11 @@ const Playlist = () => {
                         album={data.album.name}
                         key={data.uri}
                         handle={() => handleSelect(data.uri)}
-                        select={!isSelected(data.uri) ? 'Select' : 'Selected'}
+                        select={
+                            !isSelected(data.uri)
+                                ? styles.track
+                                : styles.track_select
+                        }
                     ></Tracks>
                 ))}
             </div>

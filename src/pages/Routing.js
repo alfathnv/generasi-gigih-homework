@@ -17,7 +17,6 @@ const Routing = () => {
             <Router>
                 <Navbar />
                 <Switch>
-                    {console.log(isAuth)}
                     <Route path="/createplaylist">
                         {isAuth ? <Playlist /> : <Redirect to="/" />}
                     </Route>

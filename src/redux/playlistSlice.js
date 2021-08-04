@@ -14,16 +14,14 @@ export const playlistSlice = createSlice({
             state.token = action.payload
             state.isAuth = true
         },
-
         search: (state, action) => {
             state.datas = action.payload
         },
-
         addTrack: (state, action) => {
             state.tracks.push(action.payload)
         },
         removeTrack: (state, action) => {
-            state.tracks = state.datas.filter((uri) => action.payload !== uri)
+            state.tracks = state.tracks.filter((uri) => action.payload !== uri)
         },
     },
 })

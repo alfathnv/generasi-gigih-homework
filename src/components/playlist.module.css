@@ -2,18 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.tracks {
-    display: grid;
+    min-width: 100%;
 }
 
 .search_input {
-    border: none;
-    padding: 15px 200px 15px 15px;
+    min-width: 500px;
+    padding: 15px 20px;
+    display: inline-block;
     box-sizing: border-box;
-    text-align: left;
-    border-radius: 20px;
     outline: none;
+    border: none;
+    border-radius: 20px;
     font-size: 15px;
+    font-family: Poppins;
 }
