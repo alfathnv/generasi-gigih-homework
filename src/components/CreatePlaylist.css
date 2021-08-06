@@ -1,23 +1,23 @@
 .create {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    border: none;
-    outline: none;
-    background-color: rgb(20, 20, 20); /* Green */
-    border: none;
-    color: white;
-    padding: 20px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: all 0.35s;
-    border-radius: 10px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: none;
+  outline: none;
+  background-color: #ff0266; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.35s;
+  border-radius: 10px;
 }
 .create:hover {
-    opacity: 1;
+  opacity: 1;
 }

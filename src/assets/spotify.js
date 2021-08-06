@@ -1,24 +1,24 @@
 // import sample from './sample'
 
 const getOptions = (token) => {
-    const options = {
-        method: 'GET',
-        headers: new Headers({
-            Authorization: `Bearer ${token}`,
-        }),
-    }
-    return options
+  const options = {
+    method: 'GET',
+    headers: new Headers({
+      Authorization: `Bearer ${token}`,
+    }),
+  }
+  return options
 }
 
 const postOptions = (token, data) => {
-    const options = {
-        method: 'POST',
-        headers: new Headers({
-            Authorization: `Bearer ${token}`,
-        }),
-        body: JSON.stringify(data),
-    }
-    return options
+  const options = {
+    method: 'POST',
+    headers: new Headers({
+      Authorization: `Bearer ${token}`,
+    }),
+    body: JSON.stringify(data),
+  }
+  return options
 }
 
 // const searchTrack = (token, query) => {
@@ -49,29 +49,29 @@ const postOptions = (token, data) => {
 // }
 
 const createPlaylist = (token, data, request) => {
-    const user_id = '0lrntv74y350btob9z21yjhxh'
-    const url = `https://api.spotify.com/v1/users/${user_id}/playlists`
-    const options = postOptions(token, request)
-    fetch(url, options)
-        .then((res) => res.json())
-        .then((json) => {
-            data.length === 0
-                ? console.log(json)
-                : addTrackPlaylist(token, json.id, data)
-        })
-        .catch((error) => console.log(error))
+  const user_id = '0lrntv74y350btob9z21yjhxh'
+  const url = `https://api.spotify.com/v1/users/${user_id}/playlists`
+  const options = postOptions(token, request)
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((json) => {
+      data.length === 0
+        ? console.log(json)
+        : addTrackPlaylist(token, json.id, data)
+    })
+    .catch((error) => console.log(error))
 }
 
 const addTrackPlaylist = (token, id, data) => {
-    const playlist_id = id
-    const url = `https://api.spotify.com/v1/playlists/${playlist_id}/tracks`
-    const options = postOptions(token, data)
-    fetch(url, options)
-        .then((res) => res.json())
-        .then((json) => {
-            console.log(json)
-        })
-        .catch((error) => console.log(error))
+  const playlist_id = id
+  const url = `https://api.spotify.com/v1/playlists/${playlist_id}/tracks`
+  const options = postOptions(token, data)
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((json) => {
+      console.log(json)
+    })
+    .catch((error) => console.log(error))
 }
 
 export { getOptions, createPlaylist }
