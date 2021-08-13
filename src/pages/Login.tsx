@@ -14,9 +14,7 @@ const Login = () => {
     loginMessage = <LoginButton url={authLink()} text="Login"></LoginButton>;
   } else {
     loginMessage = (
-      <div style={{ fontSize: "30px", color: "white", opacity: "87%" }}>
-        Already Login . . .
-      </div>
+      <div style={{ fontSize: "30px", color: "white" }}>Already Login...</div>
     );
   }
 
