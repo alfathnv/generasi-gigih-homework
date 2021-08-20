@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+## Built Using
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Create React App](https://create-react-app.dev/) to initialize the project with.
+- [typescript](https://typescriptlang.org) using typescript template
+- [React redux](https://react-redux.js.org/) for state management.
+- [Chakra-ui](https://chakra-ui.com/docs/getting-started) for styling and using Flex and Grid.
+- [Jest](https://jestjs.io/) & [react testing-library](https://testing-library.com/) for testing.
+- [Vercel](https://vercel.com/) for deploying.
 
-## Available Scripts
+## Environment Variables
 
-In the project directory, you can run:
+To run this project, you will need to add the following environment variables to your .env.local file
 
-### `yarn start`
+`REACT_APP_REDIRECT_URI` used for grant flow callback.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`REACT_APP_CLIENT_ID` your spotify client secret.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`REACT_APP_CLIENT_SECRET` your spotify client id.
 
-### `yarn test`
+## Run Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project
 
-### `yarn build`
+```bash
+  git clone https://github.com/alfathnv/generasi-gigih-homework
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Go to the project directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  cd generasi-gigih-homework
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies
 
-### `yarn eject`
+```bash
+  yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Start the server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open http://localhost:3000 with your browser to see the result.
