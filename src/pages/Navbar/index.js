@@ -1,9 +1,11 @@
+import { useAppSelector } from "../../redux/hooks";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 import "./index.css";
 
 const Navbar = () => {
+  //const { profile } = useAppSelector((state) => state.playlist);
   useEffect(() => {
     let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
@@ -18,6 +20,12 @@ const Navbar = () => {
       sidebar.classList.toggle("open");
       menuBtnChange(); //calling the function(optional)
     });
+    return () => {
+      closeBtn.removeEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+    };
   }, []);
 
   // following are the code to change sidebar button(optional)

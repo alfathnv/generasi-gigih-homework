@@ -2,42 +2,25 @@ import { useState, useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { search } from "../redux/playlistSlice";
 import { Grid, GridItem } from "@chakra-ui/react";
-import { getOptions } from "../assets/spotify";
+import { getSearch } from "../assets/spotify";
 import { Select } from "../components/Select";
 import Search from "../components/Search";
 import sample from "../assets/sample";
 import Track from "../components/Track";
 import CreatePlaylist from "../components/CreatePlaylist";
+import UserProfile from "../components/UserProfile";
 
 const Playlist = () => {
-  const { token, datas } = useAppSelector((state) => state.playlist);
+  const { token, datas, user } = useAppSelector((state) => state.playlist);
   const dispatch = useAppDispatch();
-  const [query, setQuery] = useState("twice");
+  const [query, setQuery] = useState("");
   const { isSelected, handleSelect } = Select();
 
   useEffect(() => {
-    console.log(query);
-    console.log(token);
-    const API_ENDPOINT = "https://api.spotify.com/v1/search";
-    const TYPE = "track";
-    const LIMIT = "20";
-    const paramsData: { q: string; type: string; limit: string } = {
-      q: query,
-      type: TYPE,
-      limit: LIMIT,
-    };
-    const params = new URLSearchParams(paramsData).toString();
-    const url = `${API_ENDPOINT}?${params}`;
-    const fetchOptions = getOptions(token);
-    console.log(url);
     query
-      ? fetch(url, fetchOptions)
-          .then((res) => res.json())
-          .then((json) => {
-            console.log(json.tracks.items);
-            dispatch(search(json.tracks.items));
-          })
-          .catch((error) => console.log(error))
+      ? getSearch(token, query).then((res) =>
+          dispatch(search(res.tracks.items))
+        )
       : dispatch(search(sample));
   }, [dispatch, query, token]);
 
@@ -48,6 +31,7 @@ const Playlist = () => {
 
   return (
     <Grid templateRows="100px 1fr">
+      <UserProfile name={user.display_name} url={user.images[0].url} />
       <GridItem rowSpan={1}>
         <Search handle={handleSubmit} />
       </GridItem>

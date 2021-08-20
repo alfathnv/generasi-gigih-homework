@@ -16,6 +16,7 @@ const Search: React.FC<Props> = ({ handle }) => {
           p="20px"
           width="30%"
           mt="40px"
+          color="white"
         ></Input>
       </Flex>
     </form>
