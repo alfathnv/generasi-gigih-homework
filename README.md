@@ -1,5 +1,15 @@
 My Final Project : https://alfath-yabb.vercel.app
 
+## Features
+- Login using your Spotify Account
+- Search your favorite Song
+- Select your song and Create your own playlist
+- Cool Navbar with transition
+- Your own profile pictures
+
+## Problem Description
+- This is not responsive yet
+
 ## Built Using
 
 - [Create React App](https://create-react-app.dev/) to initialize the project with.
