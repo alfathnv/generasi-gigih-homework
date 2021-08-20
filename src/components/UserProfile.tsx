@@ -21,7 +21,7 @@ const UserProfile: React.FC<props> = ({ name, url }) => {
       transition="all .20s"
       _hover={{ opacity: "100%" }}
     >
-      <Heading as="h5" size="sm">
+      <Heading as="h5" size="sm" color="white">
         {name}
       </Heading>
       <Box
