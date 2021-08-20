@@ -1,5 +1,9 @@
 # My Final Project fro #GENERASIGIGIH
 
+<p align="center">
+  <img src="image/ss.png" alt='preview'>
+</p>
+
 You can click here [WEBSITE](https://alfath-yabb.vercel.app)
 
 ## Features
