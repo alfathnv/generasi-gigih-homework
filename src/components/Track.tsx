@@ -24,7 +24,7 @@ const Track: React.FC<Props> = (props) => {
         transition="all .1s"
         _hover={{ bg: "#0d0d0d" }}
         _active={{ bg: "#ff0266" }}
-        borderRadius="20px"
+        borderRadius="10px"
       >
         <Image src={props.url} alt={props.name} boxSize="200px"></Image>
         <Box

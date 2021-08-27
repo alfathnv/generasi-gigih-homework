@@ -1,4 +1,3 @@
-import { useAppSelector } from "../../redux/hooks";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -34,7 +33,7 @@ const Navbar = () => {
     <nav className="sidebar">
       <div className="logo-details">
         <i className="bx bxl-spotify"></i>
-        <div className="logo_name">Generasi Gigih</div>
+        <div className="logo_name">yourSpoist</div>
         <i className="bx bx-menu" id="btn"></i>
       </div>
       <ul className="nav-list">

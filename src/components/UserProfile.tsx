@@ -16,7 +16,7 @@ const UserProfile: React.FC<props> = ({ name, url }) => {
       right="20px"
       top="20px"
       zIndex="1000"
-      opacity="10%"
+      opacity="20%"
       cursor="default"
       transition="all .20s"
       _hover={{ opacity: "100%" }}
